@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  /* If you want to position the image absolutely within the header */
+}
+
+#headerImage {
+  width: 100%;
+  /* or adjust as needed */
+  height: auto;
+  /* or set a fixed height if you prefer */
+  display: block;
+  /* To remove any space below the image */
+  margin: 0 auto;
+  /* Center the image if it's smaller than the header */
+  z-index: 0;
+  /* If you need to layer the image behind other elements */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  /* Adjust based on your design */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  /* Smooth transition for slide change */
+}
+
+.carousel-slides img {
+  width: 100%;
+  /* or set to a specific width if you prefer */
+  height: auto;
+  /* maintain aspect ratio */
+  flex-shrink: 0;
+}
+
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+/* Hide navigation buttons if not necessary for your design */
+/* #prevBtn, #nextBtn { display: none; } */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+#cta-button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.services,
+.contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.service-item {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#contact-form button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
